@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<body>
+    <!-- Blobby effect -->
+    <!-- <div class="blob"></div>
+    <style>
+        .blob {
+            width: 300px;
+            height: 300px;
+            border-radius: 62% 38% 65% 35% / 41% 63% 37% 59%;
+            background: #FFE3FE;
+            /* background: -webkit-linear-gradient(to bottom, #F81CF0, #581156);
+            background: linear-gradient(to bottom, #F81CF0, #581156); */
+            animation: rotate 8s 0.2s linear infinite;
+            transform-origin: 52% 52%;
+            overflow-y: hidden !important;
+            overflow-x: hidden !important;
+        }
+
+        .blob:before,
+        .blob:after {
+            content: "";
+            background-color: #F81CF0;
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: 62% 38% 65% 35% / 41% 63% 37% 59%;
+            opacity: 0.5;
+        }
+
+        .blob:after {
+            animation: rotate 12s 0.5s linear infinite;
+            transform-origin: 52% 52%;
+        }
+
+        .blob:after {
+            animation: rotate 10s 0.5s linear infinite;
+            transform-origin: 48% 52%;
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Blobby effect -->
+
+    <!-- Liquid effect -->
+    <!-- <div class="bubble"></div>
+    <style>
+        .bubble {
+            width: 300px;
+            height: 300px;
+            content: "";
+            background-image: linear-gradient(to bottom, #F81CF0, #581156);
+            animation: wave 6s linear infinite;
+            margin: 100px auto;
+            border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+        }
+
+        @keyframes wave {
+            20% {
+                border-radius: 45% 55% 62% 38% / 53% 51% 49% 47%;
+            }
+
+            40% {
+                border-radius: 45% 55% 49% 51% / 36% 51% 49% 64%;
+            }
+
+            60% {
+                border-radius: 60% 40% 57% 43% / 47% 62% 38% 53%;
+            }
+
+            80% {
+                border-radius: 60% 40% 32% 68% / 38% 36% 64% 62%;
+            }
+        }
+    </style> --> -->
+    <!-- Liquid effect -->
+
+    <!-- Real blob -->
+    <div class="blob"></div>
+    <style>
+        .blob {
+            position: absolute;
+            background: #557788;
+        }
+
+        .blob:nth-child(1) {
+            top: -10px;
+            left: -10px;
+            width: 250px;
+            height: 260px;
+            background: #F81CF0;
+            border-radius: 100%;
+            -webkit-animation: mytopdown linear 3s infinite;
+            -moz-animation: mytopdown linear 3s infinite;
+            animation: mytopdown linear 3s infinite;
+        }
+
+        /* Mozila + Chrome */
+
+        @keyframes mytopdown {
+            0% {
+                top: 0px;
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                top: 10px;
+                transform: rotate(180deg) scale(1.04);
+            }
+
+            100% {
+                top: 0px;
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        @keyframes mytopleft {
+            0% {
+                top: 0px;
+                transform: rotate(0deg) scale(1.05);
+            }
+
+            50% {
+                top: 10px;
+                transform: rotate(180deg) scale(1);
+            }
+
+            100% {
+                top: 0px;
+                transform: rotate(360deg) scale(1.05);
+            }
+        }
+
+        @keyframes mytopright {
+            0% {
+                top: -10px;
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                top: 0px;
+                transform: rotate(180deg) scale(1.02);
+            }
+
+            100% {
+                top: -10px;
+                transform: rotate(360deg) scale();
+            }
+        }
+    </style>
+    <!-- Real blob -->
+
+    <!-- Pulse -->
+    <div id="test"></div>
+    <style>
+        @-webkit-keyframes pulse {
+            0% {
+                -webkit-transform: scale(1, 1);
+            }
+
+            50% {
+                -webkit-transform: scale(1.1, 1.1);
+            }
+
+            100% {
+                -webkit-transform: scale(1, 1);
+            }
+
+            ;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1, 1);
+            }
+
+            50% {
+                transform: scale(1.1, 1.1);
+            }
+
+            100% {
+                transform: scale(1, 1);
+            }
+
+            ;
+        }
+
+        #test {
+            background: red;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: pulse 4s linear infinite;
+            animation: pulse 4s linear infinite;
+        }
+    </style>
+    <!-- Pulse -->
+</body>
+
+</html>
